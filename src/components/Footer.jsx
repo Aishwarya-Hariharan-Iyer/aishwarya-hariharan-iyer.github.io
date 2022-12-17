@@ -1,6 +1,5 @@
 import { Container, Row, Col, Button } from "react-bootstrap";
 import logo from "../assets/img/logo.png";
-import mail from "../assets/img/mail.png";
 
 export const Footer = () => {
   return (
