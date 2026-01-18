@@ -6,7 +6,6 @@ import HeroGlassPanel from "./components/ui/hero-glasspanel";
 import { Navbar } from "./components/ui/navbar";
 import JigsawMe from "./components/games/jigsawme";
 import { GlassModal } from "./components/ui/glassmodal";
-import TarotDraw from "./components/games/tarotdraw";
 import TarotSpread from "./components/games/tarotdraw";
 
 export default function Home() {
