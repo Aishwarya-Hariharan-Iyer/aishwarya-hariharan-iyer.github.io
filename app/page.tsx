@@ -7,10 +7,13 @@ import { Navbar } from "./components/ui/navbar";
 import JigsawMe from "./components/games/jigsawme";
 import { GlassModal } from "./components/ui/glassmodal";
 import TarotSpread from "./components/games/tarotdraw";
+import { About } from "./components/ui/about-me";
+import SkillsMarquee from "./components/ui/skills-marquee";
 
 export default function Home() {
   const [jigsawOpen, setJigsawOpen] = useState(false);
   const [tarotOpen, setTarotOpen] = useState(false);
+  const [aboutMeOpen, setAboutMeOpen] = useState(false);
 
   return (
     <div className="relative w-screen min-h-screen flex flex-col items-center justify-center overflow-hidden bg-gradient-to-br from-sky-100 via-white to-indigo-100 font-sans">
@@ -30,12 +33,28 @@ export default function Home() {
       </div>
 
       {/* Hero */}
-      <div className="relative z-40">
+      <div className="relative z-40 mt-40">
         <HeroGlassPanel />
       </div>
 
       {/* Interactions */}
       <div className="relative z-40 mt-16 flex gap-6">
+        <GlassModal
+          title="About Me"
+          open={aboutMeOpen}
+          onOpenChange={setAboutMeOpen}
+          trigger={
+            <button
+              onClick={() => setAboutMeOpen(true)}
+              className="px-6 py-3 rounded-full bg-white/60 backdrop-blur-md border border-white/50 shadow-md hover:scale-105 transition"
+            >
+              👋 About Me
+            </button>
+          }
+        >
+          <About />
+        </GlassModal>
+
         <GlassModal
           title="Reconstruct Me Puzzle"
           open={jigsawOpen}
@@ -69,6 +88,12 @@ export default function Home() {
       </GlassModal>
 
       </div>
+
+      {/* Skills Marquee */}
+      <div className="relative z-40 w-full mt-10">
+        <SkillsMarquee />
+      </div>
+
     </div>
   );
 }
