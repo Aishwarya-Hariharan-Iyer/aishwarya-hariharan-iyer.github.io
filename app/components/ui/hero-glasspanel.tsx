@@ -22,18 +22,6 @@ export default function HeroGlassPanel() {
 
     return (
         <div className="relative w-full flex justify-center">
-            {/* Confetti */}
-            <AnimatePresence>
-                {isHovering && (
-                    <Confetti
-                        width={windowSize.width}
-                        height={windowSize.height}
-                        numberOfPieces={200}
-                        gravity={0.2}
-                        recycle={false}
-                    />
-                )}
-            </AnimatePresence>
 
             {/* Glass Panel */}
             <motion.div
