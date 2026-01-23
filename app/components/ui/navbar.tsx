@@ -4,7 +4,7 @@ import React, { useState } from "react";
 import Link from "next/link";
 import { cn } from "@/lib/utils";
 import { MenuItem, Menu } from "@/components/ui/navbar-menu";
-import { motion, AnimatePresence } from "motion/react";
+import { motion, AnimatePresence } from "framer-motion";
 
 export function Navbar({ className }: { className?: string }) {
   const [active, setActive] = useState<string | null>(null);
@@ -63,7 +63,7 @@ export function Navbar({ className }: { className?: string }) {
             href="/projects"
             label="Projects"
             emoji="🧪"
-            tooltip="Things I’ve built"
+            tooltip="Research & Projects"
             active={active}
             setActive={setActive}
             hovered={hovered}
@@ -73,7 +73,7 @@ export function Navbar({ className }: { className?: string }) {
             href="/experience"
             label="Experience"
             emoji="🧠"
-            tooltip="Roles & responsibilities"
+            tooltip="Roles & Responsibilities"
             active={active}
             setActive={setActive}
             hovered={hovered}
@@ -83,7 +83,7 @@ export function Navbar({ className }: { className?: string }) {
             href="/achievements"
             label="Achievements"
             emoji="🏆"
-            tooltip="Awards & recognition"
+            tooltip="Awards & Recognition"
             active={active}
             setActive={setActive}
             hovered={hovered}

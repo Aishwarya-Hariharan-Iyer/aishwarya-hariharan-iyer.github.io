@@ -1,7 +1,7 @@
 "use client";
 
 import * as Dialog from "@radix-ui/react-dialog";
-import { motion } from "motion/react";
+import { motion } from "framer-motion";
 import { VisuallyHidden } from "@radix-ui/react-visually-hidden";
 
 export function GlassModal({

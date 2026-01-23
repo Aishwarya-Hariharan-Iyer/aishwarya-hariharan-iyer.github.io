@@ -1,9 +1,9 @@
 "use client";
 
 import { useState } from "react";
-import { motion, AnimatePresence } from "motion/react";
 import { tarotDeck } from "@/app/data/tarot";
 import TarotCard from "./tarotcard";
+import { AnimatePresence, motion } from "framer-motion";
 
 export default function TarotSpread({ onDone }: { onDone: () => void }) {
   const [selectedId, setSelectedId] = useState<string | null>(null);
