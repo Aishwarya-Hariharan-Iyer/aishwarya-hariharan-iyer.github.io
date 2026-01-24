@@ -1,0 +1,59 @@
+import { Timeline } from "@/components/ui/education-timeline";
+import { educations } from "../data/education";
+import { Navbar } from "../components/ui/navbar";
+
+/* ------------------------------------------------------------------ */
+/* Helpers                                                            */
+/* ------------------------------------------------------------------ */
+
+function renderNotes(
+  notes: { category: "academics" | "extracurricular"; text: string }[],
+  category: "academics" | "extracurricular"
+) {
+  return (
+    <ul className="space-y-2 text-sm text-neutral-700">
+      {notes
+        .filter((n) => n.category === category)
+        .map((n, i) => (
+          <li key={i} className="flex items-start gap-2">
+            <span
+              className={
+                category === "academics"
+                  ? "text-cyan-400 shrink-0 pt-[2px]"
+                  : "text-violet-400 shrink-0 pt-[2px]"
+              }
+            >
+              ▸
+            </span>
+            <span className="leading-relaxed">{n.text}</span>
+          </li>
+        ))}
+    </ul>
+  );
+}
+
+
+
+/* ------------------------------------------------------------------ */
+/* Page                                                               */
+/* ------------------------------------------------------------------ */
+
+export default function EducationPage() {
+  const timelineData = educations.map((edu) => ({
+    title: edu.title,
+    period: edu.period,
+    location: edu.location,
+
+    academics: renderNotes(edu.notes, "academics"),
+    extracurriculars: renderNotes(edu.notes, "extracurricular"),
+  }));
+
+  return (
+    <div className="w-full">
+        <div className="absolute top-0 left-0 w-full z-30">
+          <Navbar />
+        </div>
+      <Timeline data={timelineData} />
+    </div>
+  );
+}
