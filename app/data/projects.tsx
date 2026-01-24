@@ -155,6 +155,7 @@ export const portfolioData: PortfolioItem[] = [
     type: "publication",
     name: "Gamified Screening for Developmental Dyslexia Among Young Readers",
     desc: "IEEE Conference Publication (INOCON 2024)",
+    imgSrc: "/gamified-screening.png",
     details:
       "Proposed and evaluated a gamified prototype for early dyslexia screening incorporating multimodal assessment strategies.",
     tools: [
@@ -172,6 +173,7 @@ export const portfolioData: PortfolioItem[] = [
     type: "publication",
     name: "Dementia Detection Using Machine Learning in Males and Females",
     desc: "Best Paper Award – Global AI Summit 2024",
+    imgSrc: "/dementia-detection.png",
     details:
       "Analysed gender-based differences in dementia detection using ML models with a focus on feature importance and interpretability.",
     tools: [
@@ -188,6 +190,7 @@ export const portfolioData: PortfolioItem[] = [
     type: "publication",
     name: "Automated Identification and Analysis of Plant Traits",
     desc: "Presented at IISc Biennial Lake Symposium",
+    imgSrc: "/lake2024.png",
     details:
       "Applied CNNs and explainability frameworks to automate plant trait identification for ecosystem health research, supported by a web-based prototype.",
     tools: [
@@ -204,6 +207,7 @@ export const portfolioData: PortfolioItem[] = [
     type: "publication",
     name: "Agent-Based Modelling of Urban Heat Island",
     desc: "Poster – ASCB Cell Bio 2024",
+    imgSrc: "/netlogo.png",
     details:
       "Developed a NetLogo-based agent simulation model for teaching interdisciplinary concepts related to urban heat islands.",
     tools: [
