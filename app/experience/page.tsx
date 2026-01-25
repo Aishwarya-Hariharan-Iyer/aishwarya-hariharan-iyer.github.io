@@ -2,16 +2,17 @@
 
 import { Timeline } from "@/components/ui/timeline";
 import { experiences } from "../data/experience";
-import { Navbar } from "../components/ui/navbar";
+import { PageHeader } from "../components/layout/page-header";
+import { PageLayout } from "../components/layout/page-layout";
 
 export default function ExperiencePage() {
   return (
-    
-    <div className="w-full">
-      <div className="absolute top-0 left-0 w-full z-30">
-        <Navbar />
-      </div>
+    <PageLayout padded={false}>
+      <PageHeader
+        title="Experience"
+        subtitle="Professional, research, and leadership roles."
+      />
       <Timeline data={experiences} />
-    </div>
+    </PageLayout>
   );
 }

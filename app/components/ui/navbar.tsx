@@ -11,15 +11,16 @@ export function Navbar({ className }: { className?: string }) {
   const [hovered, setHovered] = useState<string | null>(null);
 
   return (
-    <motion.div
-      initial={{ opacity: 0, y: -12 }}
-      animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.6, ease: "easeOut" }}
-      className={cn(
-        "fixed top-8 inset-x-0 z-50 mx-auto max-w-fit",
-        className
-      )}
-    >
+      <motion.div
+        initial={{ opacity: 0, y: -12 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.6, ease: "easeOut" }}
+        className={cn(
+          "relative w-fit",
+          className
+        )}
+      >
+
       {/* Single Glass Capsule */}
       <div
         className="

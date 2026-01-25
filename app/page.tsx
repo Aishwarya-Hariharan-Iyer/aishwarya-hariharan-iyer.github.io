@@ -27,8 +27,17 @@ export default function Home() {
         <div className="absolute bottom-1/3 right-1/4 w-[40vw] h-[40vw] bg-indigo-300/30 blur-[120px] rounded-full animate-pulse delay-700" />
       </div>
 
-      {/* Navbar */}
-      <div className="absolute top-0 left-0 w-full z-30">
+      {/* FIXED, TRUE CENTER */}
+      <div
+        className="
+          fixed top-8 left-1/2 -translate-x-1/2
+          z-50
+          rounded-full
+          bg-white/60 backdrop-blur-2xl
+          border border-white/50
+          shadow-[0_25px_60px_rgba(0,0,0,0.08)]
+        "
+      >
         <Navbar />
       </div>
 

@@ -1,6 +1,8 @@
 import { Timeline } from "@/components/ui/education-timeline";
 import { educations } from "../data/education";
 import { Navbar } from "../components/ui/navbar";
+import { PageHeader } from "../components/layout/page-header";
+import { PageLayout } from "../components/layout/page-layout";
 
 /* ------------------------------------------------------------------ */
 /* Helpers                                                            */
@@ -38,22 +40,23 @@ function renderNotes(
 /* Page                                                               */
 /* ------------------------------------------------------------------ */
 
+
 export default function EducationPage() {
   const timelineData = educations.map((edu) => ({
     title: edu.title,
     period: edu.period,
     location: edu.location,
-
     academics: renderNotes(edu.notes, "academics"),
     extracurriculars: renderNotes(edu.notes, "extracurricular"),
   }));
 
   return (
-    <div className="w-full">
-        <div className="absolute top-0 left-0 w-full z-30">
-          <Navbar />
-        </div>
+    <PageLayout padded={false}>
+      <PageHeader
+        title="Education"
+        subtitle="Academic journey and extracurricular involvement."
+      />
       <Timeline data={timelineData} />
-    </div>
+    </PageLayout>
   );
 }

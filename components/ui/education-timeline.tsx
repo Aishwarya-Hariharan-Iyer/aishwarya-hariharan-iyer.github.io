@@ -17,7 +17,7 @@ export interface EducationTimelineEntry {
 }
 
 /* ------------------------------------------------------------------ */
-/* Timeline                                                           */
+/* Timeline (content-only component)                                  */
 /* ------------------------------------------------------------------ */
 
 export function Timeline({
@@ -30,43 +30,32 @@ export function Timeline({
   const [railHeight, setRailHeight] = useState(0);
 
   useEffect(() => {
-    if (railRef.current) {
-      setRailHeight(railRef.current.getBoundingClientRect().height);
-    }
+    if (!railRef.current) return;
+
+    const resize = () => {
+      setRailHeight(railRef.current!.getBoundingClientRect().height);
+    };
+
+    resize();
+    window.addEventListener("resize", resize);
+    return () => window.removeEventListener("resize", resize);
   }, []);
 
   const { scrollYProgress } = useScroll({
     target: containerRef,
-    offset: ["start 20%", "end 80%"],
+    offset: ["start 25%", "end 75%"],
   });
 
   const energyHeight = useTransform(scrollYProgress, [0, 1], [0, railHeight]);
 
   return (
-    <section
-      ref={containerRef}
-      className="
-        relative w-full py-32 overflow-hidden
-        bg-gradient-to-b from-[#f7f8fc] via-[#f4f6fb] to-[#eef1f8]
-      "
-    >
-      <div className="relative mx-auto max-w-7xl px-6">
-        {/* Header */}
-        <header className="mb-24">
-          <h2 className="text-4xl md:text-6xl font-bold text-neutral-900">
-            Education
-          </h2>
-          <p className="mt-4 max-w-md text-neutral-600">
-            A timeline of academic achievements and extracurricular involvement.
-          </p>
-        </header>
-
-        {/* Timeline */}
+    <section ref={containerRef} className="relative w-full">
+      <div className="relative mx-auto max-w-6xl px-6">
         <div ref={railRef} className="relative">
-          {/* Center Aura (grounding) */}
+          {/* Center Aura */}
           <div
             className="
-              pointer-events-none absolute left-1/2 top-0 h-full w-[280px]
+              pointer-events-none absolute left-1/2 top-0 h-full w-[260px]
               -translate-x-1/2
               bg-gradient-to-b from-cyan-400/5 via-transparent to-violet-400/5
               blur-2xl
@@ -78,7 +67,7 @@ export function Timeline({
             className="
               absolute left-1/2 top-0 h-full w-[3px]
               -translate-x-1/2
-              bg-neutral-300/70 rounded-full
+              bg-neutral-300/60 rounded-full
             "
           >
             <motion.div
@@ -86,7 +75,7 @@ export function Timeline({
               className="
                 absolute top-0 w-full rounded-full
                 bg-gradient-to-b from-cyan-400 via-violet-500 to-indigo-400
-                shadow-[0_0_35px_rgba(56,189,248,0.8)]
+                shadow-[0_0_32px_rgba(56,189,248,0.6)]
               "
             />
           </div>

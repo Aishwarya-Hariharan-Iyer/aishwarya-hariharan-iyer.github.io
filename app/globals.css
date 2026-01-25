@@ -34,6 +34,34 @@
   box-sizing: border-box;
 }
 
+@keyframes reactorPulse {
+  0%, 100% {
+    transform: translateX(-50%) scale(1);
+    opacity: 0.35;
+  }
+  50% {
+    transform: translateX(-50%) scale(1.12);
+    opacity: 0.6;
+  }
+}
+
+@keyframes reactorRing {
+  0%, 100% {
+    opacity: 0.35;
+  }
+  50% {
+    opacity: 0.75;
+  }
+}
+
+.animate-reactor-pulse {
+  animation: reactorPulse 8s ease-in-out infinite;
+}
+
+.animate-reactor-ring {
+  animation: reactorRing 5s ease-in-out infinite;
+}
+
 
 @theme inline {
   --color-background: var(--background);

@@ -8,50 +8,37 @@ export interface TimelineEntry {
   content: React.ReactNode;
 }
 
+/* ------------------------------------------------------------------ */
+/* Timeline (content-only)                                             */
+/* ------------------------------------------------------------------ */
+
 export function Timeline({ data }: { data: TimelineEntry[] }) {
   const containerRef = useRef<HTMLDivElement>(null);
   const railRef = useRef<HTMLDivElement>(null);
   const [railHeight, setRailHeight] = useState(0);
 
   useEffect(() => {
-    if (railRef.current) {
-      setRailHeight(railRef.current.getBoundingClientRect().height);
-    }
+    if (!railRef.current) return;
+
+    const resize = () => {
+      setRailHeight(railRef.current!.getBoundingClientRect().height);
+    };
+
+    resize();
+    window.addEventListener("resize", resize);
+    return () => window.removeEventListener("resize", resize);
   }, []);
 
   const { scrollYProgress } = useScroll({
     target: containerRef,
-    offset: ["start 20%", "end 80%"],
+    offset: ["start 25%", "end 75%"],
   });
 
   const energyHeight = useTransform(scrollYProgress, [0, 1], [0, railHeight]);
 
   return (
-    <section
-      ref={containerRef}
-      className="relative w-full overflow-hidden py-32
-      bg-gradient-to-b from-[#f7f8fc] via-[#f4f6fb] to-[#eef1f8]"
-    >
-      {/* Ambient HUD Glow */}
-      <div className="pointer-events-none absolute inset-0">
-        <div className="absolute -top-48 left-1/2 h-[700px] w-[700px] -translate-x-1/2
-          rounded-full bg-cyan-400/10 blur-[140px]" />
-        <div className="absolute top-1/3 right-[-200px] h-[500px] w-[500px]
-          rounded-full bg-violet-400/10 blur-[120px]" />
-      </div>
-
-      <div className="relative mx-auto max-w-7xl px-6">
-        {/* Header */}
-        <header className="mb-24">
-          <h2 className="text-4xl md:text-6xl font-bold text-neutral-900">
-            Experience
-          </h2>
-          <p className="mt-4 max-w-md text-neutral-600">
-            A timeline of research, engineering, and leadership roles.
-          </p>
-        </header>
-
-        {/* Timeline */}
+    <section ref={containerRef} className="relative w-full">
+      <div className="relative mx-auto max-w-6xl px-6">
         <div ref={railRef} className="relative">
           {/* Vertical Rail */}
           <div className="absolute left-[52px] top-0 h-full w-[2px] bg-neutral-200">
@@ -60,11 +47,12 @@ export function Timeline({ data }: { data: TimelineEntry[] }) {
               className="
                 absolute top-0 w-full
                 bg-gradient-to-b from-cyan-400 via-violet-500 to-indigo-400
-                shadow-[0_0_30px_rgba(56,189,248,0.9)]
+                shadow-[0_0_28px_rgba(56,189,248,0.7)]
               "
             />
           </div>
 
+          {/* Items */}
           <div className="flex flex-col gap-32">
             {data.map((item, index) => (
               <TimelineItem key={index} {...item} />
@@ -96,7 +84,7 @@ function TimelineItem({
             relative h-11 w-11 rounded-full
             bg-white border border-cyan-300
             flex items-center justify-center
-            shadow-[0_0_35px_rgba(56,189,248,0.7)]
+            shadow-[0_0_32px_rgba(56,189,248,0.6)]
           "
         >
           <motion.div
@@ -134,11 +122,7 @@ function TimelineItem({
           shadow-[0_25px_50px_rgba(0,0,0,0.08)]
         "
       >
-        {/* Inner HUD Ring */}
-        <div
-          className="pointer-events-none absolute inset-0 rounded-2xl
-          ring-1 ring-cyan-300/20"
-        />
+        <div className="pointer-events-none absolute inset-0 rounded-2xl ring-1 ring-cyan-300/20" />
         {content}
       </motion.div>
     </div>
