@@ -1,6 +1,5 @@
 import { Timeline } from "@/components/ui/education-timeline";
 import { educations } from "../data/education";
-import { Navbar } from "../components/ui/navbar";
 import { PageHeader } from "../components/layout/page-header";
 import { PageLayout } from "../components/layout/page-layout";
 
@@ -51,7 +50,7 @@ export default function EducationPage() {
   }));
 
   return (
-    <PageLayout padded={false}>
+    <PageLayout padded={false} imageLeft="/aish-graduation.png" imageRight="/aish-exams.png">
       <PageHeader
         title="Education"
         subtitle="Academic journey and extracurricular involvement."

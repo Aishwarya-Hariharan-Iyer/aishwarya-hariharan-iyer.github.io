@@ -7,7 +7,7 @@ import { PageLayout } from "../components/layout/page-layout";
 
 export default function ExperiencePage() {
   return (
-    <PageLayout padded={false}>
+    <PageLayout padded={false} imageLeft="/aish-collab.png" imageRight="/aish-working-chair.png">
       <PageHeader
         title="Experience"
         subtitle="Professional, research, and leadership roles."
