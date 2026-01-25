@@ -46,7 +46,7 @@ export default function TarotCard({
           backfaceVisibility: "hidden",
           backgroundImage: `
             radial-gradient(circle at top, rgba(56,189,248,0.25), transparent 60%),
-            url(${card.backImage})
+            url(${card.backgroundImage})
           `,
           backgroundSize: "cover",
           backgroundPosition: "center",

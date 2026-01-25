@@ -1,10 +1,4 @@
-import { FlipWords } from "@/components/ui/flip-words";
 import { StickyScroll } from "@/components/ui/sticky-scroll-reveal";
-import { Vortex } from "@/components/ui/vortex";
-import React from "react";
-import { FaGithub, FaLinkedin } from 'react-icons/fa';
-
-const words = ["poet", "programmer", "dreamer", "doer"]
 
 const content = [
   {
