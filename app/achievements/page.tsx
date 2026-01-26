@@ -10,7 +10,7 @@ export default function AchievementsPage() {
   const [hovered, setHovered] = useState<number | null>(null);
 
   return (
-    <PageLayout padded={false} imageLeft="/aish-publish.png" imageRight="/aish-medals.png">
+    <PageLayout padded={false} imageLeft="/background/aish-publish.png" imageRight="/background/aish-medals.png">
       <PageHeader
         title="Achievements & Recognition"
         subtitle="Awards, honors, and milestones across academics and research."

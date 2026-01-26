@@ -51,7 +51,7 @@ export default function TarotSpread({ onDone }: { onDone: () => void }) {
             "
           >
             {/* Rune watermark */}
-            <div className="absolute inset-0 bg-[url('/runes.svg')] opacity-10 pointer-events-none" />
+            <div className="absolute inset-0 bg-[url('/vectors/runes.svg')] opacity-10 pointer-events-none" />
 
             <h3 className="text-xl font-semibold tracking-wide text-neutral-900">
               {selected.title}

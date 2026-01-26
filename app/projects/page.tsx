@@ -5,7 +5,7 @@ import { PageLayout } from "../components/layout/page-layout";
 
 export default function ProjectsPage() {
   return (
-    <PageLayout padded={false} imageLeft="/aish-rock-hat.png" imageRight="/aish-victory-sign.png">
+    <PageLayout padded={false} imageLeft="/background/aish-rock-hat.png" imageRight="/background/aish-victory-sign.png">
       <PageHeader
         title="Projects & Publications"
         subtitle="AI, NLP, EEG, climate research, and explainable systems."

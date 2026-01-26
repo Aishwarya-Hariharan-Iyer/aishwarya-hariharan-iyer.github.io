@@ -1,11 +1,11 @@
 export type PortfolioItem = {
-  type: "project" | "publication";
+  type: "project" | "study";
   name: string;
   desc: string;
   details: string;
   tools: string[];
   imgSrc?: string;
-  link?: string;
+  link: string;
   citation?: string;
 };
 
@@ -14,7 +14,7 @@ export const portfolioData: PortfolioItem[] = [
   /* ===================== PROJECTS ===================== */
 
   {
-    type: "project",
+    type: "study",
     name: "Transforming Grammatical Error Correction (GEC)",
     desc: "Understand Context in Grammar Correction!",
     details:
@@ -28,11 +28,12 @@ export const portfolioData: PortfolioItem[] = [
       "BiLSTM",
       "Error Analysis",
     ],
-    imgSrc: "/gec.png",
+    imgSrc: "/projects/gec.png",
+    link: "https://github.com/teekaytai/cs4248-project",
   },
 
   {
-    type: "project",
+    type: "study",
     name: "A Tale Of Four Cities",
     desc: "Compare Surface Urban Heat in Cities!",
     details:
@@ -45,11 +46,12 @@ export const portfolioData: PortfolioItem[] = [
       "JavaScript",
       "Climate Research",
     ],
-    imgSrc: "/suhii.png",
+    imgSrc: "/projects/suhii.png",
+    link: "https://www.canva.com/design/DAGCkNVAOvw/VdNeo_QTfYQ4jl3KVMliqw/edit?utm_content=DAGCkNVAOvw&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton",
   },
 
   {
-    type: "project",
+    type: "study",
     name: "Detecting Abnormal Brain Activity Using EEG Signals",
     desc: "Explainable AI for EEG-based Seizure Detection",
     details:
@@ -63,7 +65,8 @@ export const portfolioData: PortfolioItem[] = [
       "TensorFlow",
       "PyTorch",
     ],
-    imgSrc: "/eeg.png",
+    imgSrc: "/projects/eeg.png",
+    link: "https://drive.google.com/file/d/1O7bONvjyX7Jf6SBpRhtiw5SY3KQaKKku/view?usp=sharing"
   },
 
   {
@@ -80,7 +83,8 @@ export const portfolioData: PortfolioItem[] = [
       "Generative AI",
       "Data Visualisation",
     ],
-    imgSrc: "/justyap.png",
+    imgSrc: "/projects/justyap.png",
+    link: "https://justyapp.vercel.app/",
   },
 
   {
@@ -97,7 +101,8 @@ export const portfolioData: PortfolioItem[] = [
       "E2E Testing",
       "Unit Testing",
     ],
-    imgSrc: "/jarvis.png",
+    link: "https://www.linkedin.com/in/aishwarya-h-iyer/details/publications/",
+    imgSrc: "/projects/jarvis.png",
   },
 
   {
@@ -114,7 +119,8 @@ export const portfolioData: PortfolioItem[] = [
       "Machine Learning",
       "Research",
     ],
-    imgSrc: "/dyswiz.png",
+    imgSrc: "/projects/dyswiz.png",
+    link: "https://drive.google.com/file/d/1oXKJm1bYxXG6jv5n0m1b0lqH1QXJc0F5/view?usp=sharing",
   },
 
   {
@@ -130,7 +136,8 @@ export const portfolioData: PortfolioItem[] = [
       "Text Summarisation",
       "NLP",
     ],
-    imgSrc: "/adsome.png",
+    imgSrc: "/projects/adsome.png",
+    link: "https://drive.google.com/file/d/1ysfCDDH-t6sVFY2fEvEmzh8JNMkzJsJY/view?usp=sharing",
   },
 
   {
@@ -146,77 +153,7 @@ export const portfolioData: PortfolioItem[] = [
       "Web Development",
       "Testing",
     ],
-    imgSrc: "/modplanus.png",
-  },
-
-  /* ===================== PUBLICATIONS ===================== */
-
-  {
-    type: "publication",
-    name: "Gamified Screening for Developmental Dyslexia Among Young Readers",
-    desc: "IEEE Conference Publication (INOCON 2024)",
-    imgSrc: "/gamified-screening.png",
-    details:
-      "Proposed and evaluated a gamified prototype for early dyslexia screening incorporating multimodal assessment strategies.",
-    tools: [
-      "Unity",
-      "Game-Based Learning",
-      "Dyslexia Screening",
-      "HCI",
-      "Educational Technology",
-    ],
-    citation:
-      "Iyer AH, Iyer GN. Gamified screening for developmental dyslexia among young readers. INOCON 2024, IEEE.",
-  },
-
-  {
-    type: "publication",
-    name: "Dementia Detection Using Machine Learning in Males and Females",
-    desc: "Best Paper Award – Global AI Summit 2024",
-    imgSrc: "/dementia-detection.png",
-    details:
-      "Analysed gender-based differences in dementia detection using ML models with a focus on feature importance and interpretability.",
-    tools: [
-      "Machine Learning",
-      "Explainable AI",
-      "Healthcare AI",
-      "Signal Processing",
-    ],
-    citation:
-      "Iyer AH et al. Dementia detection using machine learning in males and females. Global AI Summit 2024, IEEE.",
-  },
-
-  {
-    type: "publication",
-    name: "Automated Identification and Analysis of Plant Traits",
-    desc: "Presented at IISc Biennial Lake Symposium",
-    imgSrc: "/lake2024.png",
-    details:
-      "Applied CNNs and explainability frameworks to automate plant trait identification for ecosystem health research, supported by a web-based prototype.",
-    tools: [
-      "CNN",
-      "Computer Vision",
-      "Explainable AI",
-      "Environmental Research",
-    ],
-    citation:
-      "Iyer AH, Widyawati J. Automated identification and analysis of plant traits. IISc Lake Symposium 2024.",
-  },
-
-  {
-    type: "publication",
-    name: "Agent-Based Modelling of Urban Heat Island",
-    desc: "Poster – ASCB Cell Bio 2024",
-    imgSrc: "/netlogo.png",
-    details:
-      "Developed a NetLogo-based agent simulation model for teaching interdisciplinary concepts related to urban heat islands.",
-    tools: [
-      "NetLogo",
-      "Agent-Based Modelling",
-      "Climate Modelling",
-      "Education",
-    ],
-    citation:
-      "Loo YL, Iyer AH. Agent-based modelling of urban heat island. ASCB Cell Bio 2024.",
+    imgSrc: "/projects/modplanus.png",
+    link: "https://github.com/ModPlaNUS/ModPlaNUS",
   },
 ];

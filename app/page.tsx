@@ -1,18 +1,14 @@
 "use client";
 
-import { useState } from "react";
 import { Boxes } from "@/components/ui/background-boxes";
 import HeroGlassPanel from "./components/ui/hero-glasspanel";
 import { Navbar } from "./components/ui/navbar";
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
+import Image from 'next/image';
 import SkillsMarquee from "./components/ui/skills-marquee";
 import { NoiseBackground } from "@/components/ui/noise-background";
 
 export default function Home() {
-  const [jigsawOpen, setJigsawOpen] = useState(false);
-  const [tarotOpen, setTarotOpen] = useState(false);
-  const [aboutMeOpen, setAboutMeOpen] = useState(false);
-
   return (
     <div className="relative w-screen min-h-screen flex flex-col items-center justify-center overflow-hidden bg-gradient-to-br from-sky-100 via-white to-indigo-100 font-sans">
 
@@ -45,9 +41,11 @@ export default function Home() {
       <div className="relative z-40 mt-40 w-full flex items-center justify-center overflow-visible">
 
         {/* LEFT FLOATING IMAGE */}
-        <img
-          src="/aish-painting.png"
-          aria-hidden
+        <Image
+          src="/background/aish-painting.png"
+          alt="A painting of Aishwarya"
+          width={300}
+          height={300}
           className="
             absolute
             left-[2rem]                 /* closer to panel */
@@ -67,9 +65,11 @@ export default function Home() {
         </div>
 
         {/* RIGHT FLOATING IMAGE */}
-        <img
-          src="/aish-holograms.png"
-          aria-hidden
+        <Image
+          src="/background/aish-holograms.png"
+          alt="Holograms of Aishwarya"
+          width={300}
+          height={300}
           className="
             absolute
             right-[1rem]                /* closer to panel */

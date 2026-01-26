@@ -50,7 +50,7 @@ export default function EducationPage() {
   }));
 
   return (
-    <PageLayout padded={false} imageLeft="/aish-graduation.png" imageRight="/aish-exams.png">
+    <PageLayout padded={false} imageLeft="/background/aish-graduation.png" imageRight="/background/aish-exams.png">
       <PageHeader
         title="Education"
         subtitle="Academic journey and extracurricular involvement."

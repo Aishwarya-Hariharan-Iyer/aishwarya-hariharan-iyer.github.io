@@ -53,7 +53,7 @@ export default function TarotCard({
         }}
       >
         {/* Rune overlay */}
-        <div className="absolute inset-0 bg-[url('/runes.svg')] opacity-20 mix-blend-overlay" />
+        <div className="absolute inset-0 bg-[url('/vectors/runes.svg')] opacity-20 mix-blend-overlay" />
 
         {/* Inner frame */}
         <div className="absolute inset-2 rounded-xl border border-cyan-300/30" />
