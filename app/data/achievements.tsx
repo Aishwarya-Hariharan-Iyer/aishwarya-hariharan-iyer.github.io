@@ -199,7 +199,6 @@ export const achievements: Achievement[] = [
     description: "Awarded the prestigious Dr Goh Keng Swee Scholarship for academic excellence and extracurricular achievements.",
     year: "Aug, 2021",
     category: "Recognitions",
-    image: "/achievements/dr-goh-keng-swee-scholarship.png",
     href: "https://www.credential.net/1c6f3f6d-B8e1-4f5e-9f3a-1e3f5b6c7d8e"
   },
   {
@@ -207,7 +206,6 @@ export const achievements: Achievement[] = [
     description: "Achieved a top score of 1570/1600 in the SAT examination, ranking among the top performers in India.",
     year: "Jan, 2021",
     category: "Awards",
-    image: "/achievements/sat-top-performer.png",
     href: "https://www.linkedin.com/in/aishwarya-h-iyer/",
   },
   {
@@ -215,7 +213,6 @@ export const achievements: Achievement[] = [
     description: "Awarded by College Board for outstanding performance across multiple Advanced Placement examinations.",
     year: "Jan, 2020",
     category: "Awards",
-    image: "/achievements/ap-scholar-award.png",
     href: "https://www.linkedin.com/in/aishwarya-h-iyer/",
   },
   {
@@ -223,7 +220,6 @@ export const achievements: Achievement[] = [
     description: "Invited by the Government of India to view the Republic Day Parade from the PMO's Box for academic merit.",
     year: "Jan, 2019",
     category: "Recognitions",
-    image: "/achievements/republic-day-parade.png",
     href: "https://www.linkedin.com/in/aishwarya-h-iyer/",
   },
   {
@@ -231,7 +227,6 @@ export const achievements: Achievement[] = [
     year: "May, 2019",
     description: "Achieved All-India Rank 3 in the Grade 10 Board Examinations.",
     category: "Awards",
-    image: "/achievements/cbse-rank-3.png",
     href: "https://www.linkedin.com/in/aishwarya-h-iyer/",
   },
   {
@@ -239,7 +234,6 @@ export const achievements: Achievement[] = [
     description: "Awarded by the Indian Institute of Science (IISc) for research presented at the Biennial Lake Conference.",
     category: "Awards",
     year: "Nov, 2018",
-    image: "/achievements/sahyadri-young-ecologist.png",
     href: "https://www.linkedin.com/in/aishwarya-h-iyer/",
   },
 ];

@@ -5,6 +5,7 @@ import Image from "next/image";
 import { cn } from "@/lib/utils";
 import { useRouter } from "next/navigation";
 import { Achievement } from "@/app/data/achievements";
+import { NoiseBackground } from "./noise-background";
 
 export function AchievementCard({
   achievement,
@@ -21,6 +22,21 @@ export function AchievementCard({
   const isFocused = hovered === index;
 
   return (
+
+    <NoiseBackground
+      containerClassName="
+        w-fit p-2 mx-auto
+        rounded-xl
+        relative overflow-hidden
+        bg-black/85
+        [filter:saturate(140%)_brightness(105%)]
+      "
+      gradientColors={[
+        "rgb(20, 90, 160)",   // Stark blue
+        "rgb(0, 160, 220)",   // arc-reactor cyan
+        "rgb(67, 252, 255)",    // deep Stark navy
+      ]}
+    >
     <div
       role="button"
       tabIndex={0}
@@ -29,84 +45,51 @@ export function AchievementCard({
       onMouseLeave={() => setHovered(null)}
       className={cn(
         "relative h-64 md:h-80 rounded-xl overflow-hidden",
-        "transition-all duration-500 ease-out",
-        "cursor-pointer bg-black/40 backdrop-blur-md",
-        "border border-white/15",
-        "hover:border-cyan-400/60",
+        "transition-all duration-500 ease-out cursor-pointer",
+        "border border-white/20",
         isFocused
-          ? "scale-[1.04] z-10 shadow-[0_0_60px_rgba(34,211,238,0.45)]"
+          ? "scale-[1.04] z-10 shadow-[0_0_40px_rgba(34,211,238,0.35)]"
           : hovered !== null
-          ? "scale-[0.92] opacity-35 blur-[0.3px]"
-          : "opacity-90"
+          ? "scale-[0.94] opacity-60"
+          : "opacity-95"
       )}
     >
-      {/* IMAGE — base layer */}
+      {/* IMAGE (true background) */}
       <Image
         src={achievement.image || "/achievements/placeholder-achievement.png"}
         alt={achievement.title}
         fill
         sizes="(max-width: 768px) 100vw, 33vw"
-        className={cn(
-          "object-cover transition-transform duration-700 z-0",
-          isFocused && "scale-110"
-        )}
+        className="object-cover"
         priority={index < 3}
         onError={(e) => {
-          const target = e.currentTarget as HTMLImageElement;
-          target.src = "/achievements/placeholder-achievement.png";
+          (e.currentTarget as HTMLImageElement).src =
+            "/achievements/placeholder-achievement.png";
         }}
       />
 
-      {/* GRADIENT GLASS — above image */}
-      <div className="absolute inset-0 z-10 bg-gradient-to-br from-black/80 via-black/55 to-black/90" />
+      {/* SINGLE GLASS OVERLAY */}
+      <div className="absolute inset-0 bg-black/20" />
 
-      {/* TEXT SAFE ZONE */}
-      <div
-        className="absolute inset-x-0 bottom-0 h-2/3 z-10
-        bg-gradient-to-t from-black/85 via-black/55 to-transparent
-        pointer-events-none"
-      />
+      {/* TEXT SAFE GRADIENT */}
+      <div className="absolute inset-x-0 bottom-0 h-2/3 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
 
-      {/* SCANLINES / HUD NOISE */}
-      <div
-        className="absolute inset-0 z-10 pointer-events-none opacity-[0.07]"
-        style={{
-          backgroundImage:
-            "repeating-linear-gradient(to bottom, rgba(255,255,255,0.04) 0px, rgba(255,255,255,0.04) 1px, transparent 2px, transparent 4px)",
-          mixBlendMode: "overlay",
-        }}
-      />
-
-      {/* HUD RING */}
-      <div
-        className={cn(
-          "absolute inset-0 z-20 rounded-xl pointer-events-none transition-all",
-          isFocused &&
-            "ring-1 ring-cyan-400/40 shadow-[inset_0_0_50px_rgba(34,211,238,0.18)]"
-        )}
-      />
-
-      {/* CONTENT — top layer */}
-      <div
-        className={cn(
-          "relative z-30 h-full flex flex-col justify-end p-6",
-          "bg-black/30 backdrop-blur-sm rounded-b-xl"
-        )}
-      >
+      {/* CONTENT */}
+      <div className="relative h-full flex flex-col justify-end p-6">
         {/* Category */}
-        <span className="text-xs uppercase tracking-widest text-cyan-300 drop-shadow-[0_0_6px_rgba(34,211,238,0.35)] mb-2">
+        <span className="text-xs uppercase tracking-widest text-cyan-300 mb-2">
           {achievement.category}
         </span>
 
         {/* Title */}
-        <h3 className="text-lg md:text-xl font-semibold text-white drop-shadow-[0_2px_10px_rgba(0,0,0,0.7)]">
+        <h3 className="text-lg md:text-xl font-semibold text-white">
           {achievement.title}
         </h3>
 
         {/* Description */}
         <p
           className={cn(
-            "mt-3 text-sm text-neutral-200 leading-relaxed transition-all duration-500",
+            "mt-3 text-sm text-neutral-200 transition-all duration-500",
             isFocused
               ? "opacity-100 max-h-40"
               : "opacity-0 max-h-0 overflow-hidden"
@@ -123,5 +106,6 @@ export function AchievementCard({
         )}
       </div>
     </div>
+    </NoiseBackground>
   );
 }

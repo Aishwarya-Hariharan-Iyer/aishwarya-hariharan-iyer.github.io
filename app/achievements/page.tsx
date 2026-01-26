@@ -15,7 +15,6 @@ export default function AchievementsPage() {
         title="Achievements & Recognition"
         subtitle="Awards, honors, and milestones across academics and research."
       />
-
       <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
         {achievements.map((achievement, index) => (
           <AchievementCard
