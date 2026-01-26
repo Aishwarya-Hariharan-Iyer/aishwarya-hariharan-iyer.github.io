@@ -4,11 +4,9 @@ import { useState } from "react";
 import { Boxes } from "@/components/ui/background-boxes";
 import HeroGlassPanel from "./components/ui/hero-glasspanel";
 import { Navbar } from "./components/ui/navbar";
-import JigsawMe from "./components/games/jigsawme";
-import { GlassModal } from "./components/ui/glassmodal";
-import TarotSpread from "./components/games/tarotdraw";
-import { About } from "./components/ui/about-me";
+import { FaGithub, FaLinkedin } from 'react-icons/fa';
 import SkillsMarquee from "./components/ui/skills-marquee";
+import { NoiseBackground } from "@/components/ui/noise-background";
 
 export default function Home() {
   const [jigsawOpen, setJigsawOpen] = useState(false);
@@ -88,46 +86,68 @@ export default function Home() {
 
 
       {/* Interactions */}
-      <div className="relative z-40 mt-16 flex gap-6">
-        <GlassModal
-          title="About Me"
-          open={aboutMeOpen}
-          onOpenChange={setAboutMeOpen}
-          trigger={
-            <button className="px-6 py-3 rounded-full bg-white/60 backdrop-blur-md border border-white/50 shadow-md hover:scale-105 transition">
-              👋 About Me
-            </button>
-          }
-        >
-          <About />
-        </GlassModal>
+      <div className="relative z-40 mt-16 flex gap-6 items-center justify-center">
 
-        <GlassModal
-          title="Reconstruct Me Puzzle"
-          open={jigsawOpen}
-          onOpenChange={setJigsawOpen}
-          trigger={
-            <button className="px-6 py-3 rounded-full bg-white/60 backdrop-blur-md border border-white/50 shadow-md hover:scale-105 transition">
-              🧩 Reconstruct Me
-            </button>
-          }
+        {/* LinkedIn */}
+        <NoiseBackground
+          containerClassName="w-fit p-2 rounded-full"
+          gradientColors={[
+            "rgb(255, 100, 150)",
+            "rgb(100, 150, 255)",
+            "rgb(255, 200, 100)",
+          ]}
         >
-          <JigsawMe onDone={() => setJigsawOpen(false)} />
-        </GlassModal>
+          <a
+            href="https://www.linkedin.com/in/aishwarya-h-iyer/" 
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-white-700 hover:text-white-500"
+            aria-label="LinkedIn"
+          >
+        <FaLinkedin size={40} />
+          </a>
+        </NoiseBackground>
 
-        <GlassModal
-          title="Tarot Spread"
-          open={tarotOpen}
-          onOpenChange={setTarotOpen}
-          trigger={
-            <button className="px-6 py-3 rounded-full bg-white/60 backdrop-blur-md border border-white/50 shadow-md hover:scale-105 transition">
-              🔮 Draw the Cards
-            </button>
-          }
+        {/* Resume */}
+        <NoiseBackground
+          containerClassName="w-fit p-2 rounded-full"
+          gradientColors={[
+            "rgb(255, 100, 150)",
+            "rgb(100, 150, 255)",
+            "rgb(255, 200, 100)",
+          ]}
         >
-          <TarotSpread onDone={() => setTarotOpen(false)} />
-        </GlassModal>
+          <a
+            href="https://drive.google.com/file/d/1r2z7rPxBgsbH5dezewxF3_Lv6EKSIi8j/view?usp=sharing"
+            target="_blank"
+            className="flex items-center gap-2 h-full w-full cursor-pointer rounded-full bg-linear-to-r from-neutral-100 via-neutral-100 to-white px-5 py-2 text-black font-medium shadow-[0px_2px_0px_0px_var(--color-neutral-50)_inset,0px_0.5px_1px_0px_var(--color-neutral-400)] transition-all duration-100 hover:scale-105 active:scale-98 dark:from-black dark:via-black dark:to-neutral-900 dark:text-white"
+          >
+            Resume
+          </a>
+        </NoiseBackground>
+
+        {/* GitHub */}
+        <NoiseBackground
+          containerClassName="w-fit p-2 rounded-full"
+          gradientColors={[
+            "rgb(255, 100, 150)",
+            "rgb(100, 150, 255)",
+            "rgb(255, 200, 100)",
+          ]}
+        >
+        <a
+          href="https://github.com/Aishwarya-Hariharan-Iyer" 
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-white-800 hover:text-white-500 font-3xl"
+          aria-label="GitHub"
+        >
+        <FaGithub size={40} />
+        </a>
+        </NoiseBackground>
+
       </div>
+
 
       {/* Skills */}
       <div className="relative z-40 w-full mt-10">
