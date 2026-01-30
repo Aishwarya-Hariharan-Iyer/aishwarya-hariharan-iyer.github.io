@@ -64,7 +64,17 @@ export function Navbar({ className }: { className?: string }) {
             href="/projects"
             label="Projects"
             emoji="🧪"
-            tooltip="Research & Projects"
+            tooltip="Projects & Studies"
+            active={active}
+            setActive={setActive}
+            hovered={hovered}
+            setHovered={setHovered}
+          />
+          <NavItem
+            href="/publications"
+            label="Publications"
+            emoji="📚"
+            tooltip="Research & Books"
             active={active}
             setActive={setActive}
             hovered={hovered}

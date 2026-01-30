@@ -101,7 +101,7 @@ export const portfolioData: PortfolioItem[] = [
       "E2E Testing",
       "Unit Testing",
     ],
-    link: "https://www.linkedin.com/in/aishwarya-h-iyer/details/publications/",
+    link: "https://github.com/Aishwarya-Hariharan-Iyer",
     imgSrc: "/projects/jarvis.png",
   },
 
@@ -120,7 +120,7 @@ export const portfolioData: PortfolioItem[] = [
       "Research",
     ],
     imgSrc: "/projects/dyswiz.png",
-    link: "https://drive.google.com/file/d/1oXKJm1bYxXG6jv5n0m1b0lqH1QXJc0F5/view?usp=sharing",
+    link: "https://drive.google.com/file/d/1n3tnuCNylm_eehB2EqU665BJ6Swjh4XV/view?usp=sharing",
   },
 
   {
@@ -154,6 +154,6 @@ export const portfolioData: PortfolioItem[] = [
       "Testing",
     ],
     imgSrc: "/projects/modplanus.png",
-    link: "https://github.com/ModPlaNUS/ModPlaNUS",
+    link: "https://modplanus.netlify.app/",
   },
 ];

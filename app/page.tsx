@@ -42,7 +42,7 @@ export default function Home() {
 
         {/* LEFT FLOATING IMAGE */}
         <Image
-          src="/background/aish-painting.png"
+          src="/background/aish-painting-canvas.png"
           alt="A painting of Aishwarya"
           width={300}
           height={300}

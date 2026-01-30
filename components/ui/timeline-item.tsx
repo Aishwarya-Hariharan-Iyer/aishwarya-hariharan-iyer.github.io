@@ -5,6 +5,7 @@ import React, { useRef } from "react";
 interface TimelineItemProps {
   title: string;
   content: React.ReactNode;
+  company?: string;
   skills?: string[];
   category?: string;
 }
@@ -12,6 +13,7 @@ interface TimelineItemProps {
 export function TimelineItem({
   title,
   content,
+  company = "",
   skills = [],
   category = "General",
 }: TimelineItemProps) {
@@ -40,34 +42,22 @@ export function TimelineItem({
           <div className="pointer-events-none absolute inset-[-14px] rounded-full bg-cyan-400/20 blur-xl opacity-60" />
         </div>
 
-        {/* Title */}
-        <Highlight
-          className="
-            mt-6
-            inline-block
-            rounded-md
-            bg-cyan-100/80 dark:bg-cyan-800/60
-            px-3 py-1
-            text-sm font-semibold
-            text-neutral-900 dark:text-white
-            ring-1 ring-cyan-300/40
-            backdrop-blur
-          "
-        >
-          {title}
-        </Highlight>
+      {/* Title */}
+      <Highlight className="mt-6 inline-block rounded-md bg-cyan-100/80 dark:bg-cyan-800/60 px-3 py-1 text-sm font-semibold text-neutral-900 dark:text-white ring-1 ring-cyan-300/40 backdrop-blur">
+        {title}
+      </Highlight>
 
-        <span
+      {/* Category */}
+      <span
         className={[
           "mt-2 inline-block rounded-full px-3 py-0.5 text-[11px] font-semibold tracking-wide",
-        category === "Professional"
-          ? "bg-gradient-to-r from-indigo-500 to-violet-600 text-white"
-          : "bg-gradient-to-r from-emerald-500 to-teal-600 text-white"
+          category === "Professional"
+            ? "bg-gradient-to-r from-indigo-500 to-violet-600 text-white"
+            : "bg-gradient-to-r from-emerald-500 to-teal-600 text-white",
         ].join(" ")}
       >
         {category.toUpperCase()}
       </span>
-
 
       </div>
 
@@ -111,6 +101,13 @@ export function TimelineItem({
 
         {/* Glass edge */}
         <div className="pointer-events-none absolute inset-0 rounded-2xl ring-1 ring-cyan-300/20" />
+
+        {company && (
+          <div className="mb-3 text-sm font-semibold text-cyan-700">
+            {company}
+          </div>
+        )}
+
 
         {/* Content */}
         <div className="relative z-10 prose prose-neutral max-w-none">
