@@ -1,5 +1,5 @@
 export type PortfolioItem = {
-  type: "project" | "study";
+  type: "project" | "study" | "hobby";
   name: string;
   desc: string;
   details: string;
@@ -154,5 +154,23 @@ export const portfolioData: PortfolioItem[] = [
   ],
   imgSrc: "/projects/portfolio-archived.png",
   link: "https://aishwarya-h-iyer.netlify.app/",
-}
+  },
+  {
+    type: "project",
+    name: "LeetCode Problems",
+    desc: "Curated solutions to LeetCode problems",
+    details:
+      "A growing collection of solved LeetCode problems aimed at strengthening data structures and algorithms fundamentals. The repository focuses on clean, readable solutions with an emphasis on problem-solving patterns, edge cases, and optimization strategies, serving both as practice and a long-term reference.",
+    tools: [
+      "Data Structures",
+      "Algorithms",
+      "Problem Solving",
+      "LeetCode",
+      "Python",
+      "JavaScript",
+    ],
+    imgSrc: "/projects/leetcode.png",
+    link: "https://github.com/Aishwarya-Hariharan-Iyer/leetcode-problems",
+  }
+
 ];
