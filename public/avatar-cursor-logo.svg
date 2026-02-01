@@ -1,0 +1,67 @@
+<svg
+  width="64"
+  height="64"
+  viewBox="0 0 64 64"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <!-- Head -->
+  <circle
+    cx="32"
+    cy="34"
+    r="18"
+    fill="#F4C9A8"
+    stroke="#0EA5E9"
+    stroke-width="2"
+  />
+
+  <!-- Hair -->
+  <path
+    d="M14 30
+       C14 18, 22 12, 32 12
+       C42 12, 50 18, 50 30
+       L50 36
+       C46 32, 40 30, 32 30
+       C24 30, 18 32, 14 36 Z"
+    fill="#1F2933"
+  />
+
+  <!-- Glasses -->
+  <circle
+    cx="25"
+    cy="34"
+    r="5"
+    fill="none"
+    stroke="#0EA5E9"
+    stroke-width="1.8"
+  />
+  <circle
+    cx="39"
+    cy="34"
+    r="5"
+    fill="none"
+    stroke="#0EA5E9"
+    stroke-width="1.8"
+  />
+  <line
+    x1="30"
+    y1="34"
+    x2="34"
+    y2="34"
+    stroke="#0EA5E9"
+    stroke-width="1.4"
+  />
+
+  <!-- Eyes -->
+  <circle cx="25" cy="35" r="1.4" fill="#1F2933" />
+  <circle cx="39" cy="35" r="1.4" fill="#1F2933" />
+
+  <!-- Smile -->
+  <path
+    d="M26 40
+       Q32 43, 38 40"
+    stroke="#1F2933"
+    stroke-width="1.6"
+    fill="none"
+    stroke-linecap="round"
+  />
+</svg>

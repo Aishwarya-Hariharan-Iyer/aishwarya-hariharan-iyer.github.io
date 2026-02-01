@@ -1,3 +1,13 @@
+/* ===== CURSOR SYSTEM (FIXED) ===== */
+
+/* Baseline: everything gets default cursor */
+
+/* Default */
+html, body {
+  cursor: url("/avatar-cursor-logo.svg") 32 32, auto;
+}
+
+
 @import "tailwindcss";
 @import "tw-animate-css";
 

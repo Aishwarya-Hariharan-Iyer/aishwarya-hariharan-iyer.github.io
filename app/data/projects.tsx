@@ -139,21 +139,20 @@ export const portfolioData: PortfolioItem[] = [
     imgSrc: "/projects/adsome.png",
     link: "https://drive.google.com/file/d/1ysfCDDH-t6sVFY2fEvEmzh8JNMkzJsJY/view?usp=sharing",
   },
-
   {
-    type: "project",
-    name: "ModPlaNUS",
-    desc: "Plan Your University Journey",
-    details:
-      "Developed a React + Firebase web app to help students plan academic semesters while automatically checking prerequisites, restrictions, and graduation requirements.",
-    tools: [
-      "React",
-      "Firebase",
-      "JavaScript",
-      "Web Development",
-      "Testing",
-    ],
-    imgSrc: "/projects/modplanus.png",
-    link: "https://modplanus.netlify.app/",
-  },
+  type: "project",
+  name: "Personal Portfolio (Archived)",
+  desc: "Previous version of my personal portfolio website",
+  details:
+    "An earlier iteration of my personal portfolio showcasing selected projects, skills, and design explorations. This version has been archived and is no longer actively maintained, and is preserved as a reference for my past work and design evolution.",
+  tools: [
+    "React",
+    "JavaScript",
+    "Web Development",
+    "UI/UX Design",
+    "Responsive Design",
+  ],
+  imgSrc: "/projects/portfolio-archived.png",
+  link: "https://aishwarya-h-iyer.netlify.app/",
+}
 ];

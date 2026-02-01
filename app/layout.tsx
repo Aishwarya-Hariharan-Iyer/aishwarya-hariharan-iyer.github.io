@@ -61,14 +61,19 @@ export const metadata: Metadata = {
   },
 
   icons: {
-    icon: "/favicon.ico",
-    shortcut: "/favicon-16x16.png",
-    apple: "/apple-touch-icon.png",
+    icon: "/aish-logo.png",
+    shortcut: "/aish-logo.png",
+    apple: "/aish-logo.png",
   },
 
   robots: {
     index: true,
     follow: true,
+  },
+
+  viewport: {
+    width: "device-width",
+    initialScale: 1,
   },
 };
 
