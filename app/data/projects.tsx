@@ -177,7 +177,7 @@ export const portfolioData: PortfolioItem[] = [
     name: "DevEnable",
     desc: "CLI-based project management tool for developers",
     details:
-      "DevEnable is a desktop application designed to help software developers efficiently manage client projects from a single place. It allows users to view all projects at a glance, organize and tag tasks based on deadlines, and manage clients associated with each project. Optimized for fast keyboard-driven workflows, the application emphasizes productivity through a Command Line Interface (CLI), making it ideal for developers who prefer speed, structure, and minimal UI overhead.",
+      "Developed a CLI-focused desktop application for managing client projects, tasks, and deadlines with an emphasis on productivity and keyboard-driven workflows.",
     tools: [
       "Java",
       "Command Line Interface (CLI)",
@@ -194,7 +194,7 @@ export const portfolioData: PortfolioItem[] = [
     name: "Duke Aemon of Old",
     desc: "Archaic, narrative-driven task manager with a mysterious personality",
     details:
-      "Duke Aemon of Old is a Java-based personal task manager that blends productivity with narrative. Framed as an ancient duke risen from centuries of silence, Aemon assists users in managing todos, deadlines, and events while responding in an archaic, witty, and occasionally sardonic voice. Beyond standard task tracking, the application subtly introduces a mystery-solving angle, hinting at Aemon’s forgotten past and the circumstances of his return. Built with both CLI and JavaFX GUI support, the project emphasizes clean software architecture, robust error handling, and immersive user interaction.",
+      "Developed a Java-based task management application with CLI and JavaFX interfaces, focusing on clean architecture, robust error handling, and user-centric design.",
     tools: [
       "Java",
       "Command Line Interface (CLI)",
