@@ -171,6 +171,38 @@ export const portfolioData: PortfolioItem[] = [
     ],
     imgSrc: "/projects/leetcode.png",
     link: "https://github.com/Aishwarya-Hariharan-Iyer/leetcode-problems",
+  },
+  {
+    type: "project",
+    name: "DevEnable",
+    desc: "CLI-based project management tool for developers",
+    details:
+      "DevEnable is a desktop application designed to help software developers efficiently manage client projects from a single place. It allows users to view all projects at a glance, organize and tag tasks based on deadlines, and manage clients associated with each project. Optimized for fast keyboard-driven workflows, the application emphasizes productivity through a Command Line Interface (CLI), making it ideal for developers who prefer speed, structure, and minimal UI overhead.",
+    tools: [
+      "Java",
+      "Command Line Interface (CLI)",
+      "Software Engineering",
+      "Object-Oriented Programming",
+      "Project Management",
+      "JUnit",
+    ],
+    imgSrc: "/projects/devenable.png",
+    link: "https://github.com/AY2223S1-CS2103-F13-1/tp",
+  },
+  {
+    type: "project",
+    name: "Duke Aemon of Old",
+    desc: "Archaic, narrative-driven task manager with a mysterious personality",
+    details:
+      "Duke Aemon of Old is a Java-based personal task manager that blends productivity with narrative. Framed as an ancient duke risen from centuries of silence, Aemon assists users in managing todos, deadlines, and events while responding in an archaic, witty, and occasionally sardonic voice. Beyond standard task tracking, the application subtly introduces a mystery-solving angle, hinting at Aemon’s forgotten past and the circumstances of his return. Built with both CLI and JavaFX GUI support, the project emphasizes clean software architecture, robust error handling, and immersive user interaction.",
+    tools: [
+      "Java",
+      "Command Line Interface (CLI)",
+      "Graphical User Interface (GUI)",
+      "Object-Oriented Programming",
+      "Gradle",
+      "JUnit",    ],
+    imgSrc: "/projects/duke-aemon.png",
+    link: "https://github.com/Aishwarya-Hariharan-Iyer/Duke-Aemon",
   }
-
 ];
